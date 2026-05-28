@@ -9,8 +9,8 @@ import {validarResultadosDosTestes} from '../src/test-report.js'
 // Caso 3: {pass,pass} => TS=2, TF= 0, PR: 100%, Status: Rebeca Approved!
 // Caso 4: {fail, fail} => TS=0, TF=2, 0%, Status: “Bah! Senta aqui jovem!”
 
-describe('Validação dos Resultados de Teste', function(){
-    describe('Validações negativas', ()=>{
+describe('Validação dos Resultados de Teste com context', function(){
+    context('Validações negativas', ()=>{
         it('75% deve retornar o Status de Perigo', ()=>{
             // Arrange -> Organiza
             const resultadosDosTestes = ['pass','fail', 'pass', 'pass'];
@@ -50,7 +50,7 @@ describe('Validação dos Resultados de Teste', function(){
         })
     })
 
-    describe('Validações positivas', ()=>{
+    context('Validações positivas', ()=>{
         it('90% deve retornar o Status de Aceitável', ()=>{
             // Arrange -> Organiza
             const resultadosDosTestes = ['pass','fail', 'pass', 'pass', 'pass', 'pass', 'pass', 'pass', 'pass', 'pass'];
