@@ -4,13 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha test/**/*js",
+    "test-report": "npx mocha test/**/*.js --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "mocha": "^11.7.5"
+    "mocha": "^11.7.6"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicaraissapessoa/test-report.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jessicaraissapessoa/test-report/issues"
+  },
+  "homepage": "https://github.com/jessicaraissapessoa/test-report#readme",
+  "dependencies": {
+    "mochawesome": "^7.1.4"
   }
 }
